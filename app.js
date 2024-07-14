@@ -61,7 +61,7 @@ console.log(pokemon[3])
 
 console.log(game.party)
 
-game.party = pokemon[3]
+game.party.push(pokemon[3])
 
 console.log(game.party)
 
@@ -72,7 +72,16 @@ Exercise 5
 
 
 Solve Exercise 5 here:
+
+Pokémon 1: Bulbasaur
+Pokémon 4: Charmander
+Pokémon 7: Squirtle
+Pokémon 25: Pikachu
 */
+
+game.party.push(pokemon[30])
+game.party.push(pokemon[35])
+game.party.push(pokemon[58])
 
 
 
