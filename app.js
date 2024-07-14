@@ -38,3 +38,27 @@ game.difficulty = ["Easy", "Med", "Hard"]
 
 console.log(game.difficulty)
 
+/*
+Exercise 4
+1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
+2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
+
+
+Solve Exercise 4 here:
+*/
+
+/* choice:  
+number: 4, 
+name: "Charmander", 
+type: "fire", 
+hp: 39, 
+starter: true 
+*/
+
+console.log(pokemon[3])
+
+console.log(game.party)
+
+game.party = pokemon[3]
+
+console.log(game.party)
