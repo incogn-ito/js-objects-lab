@@ -21,6 +21,8 @@ const game = {
 
 // console.dir(pokemon, { maxArrayLength: null })
 
+console.log(pokemon[58])
+
 // Exercise 2
 
 // console.log(game)
@@ -62,3 +64,16 @@ console.log(game.party)
 game.party = pokemon[3]
 
 console.log(game.party)
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+
+
+
