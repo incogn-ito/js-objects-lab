@@ -84,5 +84,31 @@ game.party.push(pokemon[35])
 game.party.push(pokemon[58])
 
 
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
 
+
+Solve Exercise 6 here:
+*/
+
+// console.log(music.currentPlaylist[music.trackIdx]); // 'Just Ken'
+
+// something about key:value pairs
+
+console.log(game.gyms[0].completed) // exp out: false
+console.log(game.gyms[1].completed) // exp out: false
+console.log(game.gyms[2].completed) // exp out: false
+
+game.gyms.forEach((gym) => {
+    if (gym.difficulty < 3) {
+    gym.completed = "true"
+    }
+  })
+  console.log(game.gyms)
+
+  console.log(game.gyms[0].completed) // exp out: true
+  console.log(game.gyms[1].completed) // exp out: true
+  console.log(game.gyms[2].completed) // exp out: false
 
