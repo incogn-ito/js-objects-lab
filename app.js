@@ -27,7 +27,7 @@ console.log(pokemon[58])
 
 // Exercise 2
 
-// console.log(game)
+console.log(game)
 
 /*
 Exercise 3
@@ -63,7 +63,7 @@ console.log(pokemon[3])
 
 console.log(game.party)
 
-game.party.push(pokemon[3])
+game.party.unshift(pokemon[3])
 
 console.log(game.party)
 
@@ -81,10 +81,12 @@ Pokémon 7: Squirtle
 Pokémon 25: Pikachu
 */
 
-game.party.push(pokemon[30])
-game.party.push(pokemon[35])
-game.party.push(pokemon[58])
 
+game.party.unshift([pokemon[30]])
+game.party.unshift([pokemon[35]])
+game.party.unshift([pokemon[58]])
+
+console.log(game.party)
 
 /*
 Exercise 6
@@ -95,9 +97,6 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-// console.log(music.currentPlaylist[music.trackIdx]); // 'Just Ken'
-
-// something about key:value pairs
 
 console.log(game.gyms[0].completed) // exp out: false
 console.log(game.gyms[1].completed) // exp out: false
@@ -145,9 +144,7 @@ console.log(pokemon[4]) // becomes 5
 console.log(pokemon[30]) // becomes 31
 console.log(pokemon[35]) // becomes 36
 console.log(pokemon[58]) // becomes 59
-console.log(pokemon[60]) //becomes 61
-console.log(pokemon[1]) // becomes 2
-console.log(pokemon[2]) // becomes 3
+
 /*
 const game = {
   party: [],
@@ -169,3 +166,22 @@ const game = {
 }
 
 */
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+getName = function() {
+  console.log(pokemon[0].name)
+  console.log(pokemon[1].name)
+  console.log(pokemon[2].name)
+  console.log(pokemon[3].name)
+}
+getName()
+
+
+
+
