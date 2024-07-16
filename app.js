@@ -2,6 +2,7 @@ console.log("Hello")
 
 const game = {
   party: [],
+
   gyms: [
     { location: "Pewter City", completed: false, difficulty: 1 },
     { location: "Cerulean City", completed: false, difficulty: 2 },
@@ -103,7 +104,7 @@ console.log(game.gyms[2].completed) // exp out: false
 
 game.gyms.forEach((gym) => {
     if (gym.difficulty < 3) {
-    gym.completed = "true"
+    gym.completed = true
     }
   })
   console.log(game.gyms)
@@ -112,3 +113,69 @@ game.gyms.forEach((gym) => {
   console.log(game.gyms[1].completed) // exp out: true
   console.log(game.gyms[2].completed) // exp out: false
 
+/*
+Exercise 7
+1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
+2. How would you replace the current starter Pokémon in your party with its evolved form?
+
+Hint: 
+  - Pokemon 1: Bulbasaur evolves into Pokemon 2: Ivysaur
+  - Pokemon 4: Charmander evolves into Pokemon 5: Charmeleon
+  - Pokemon 7: Squirtle evolves into Pokemon 8: Wartortle
+  - Pokemon 25: Pikachu evolves into Pokemon 26: Raichu
+
+More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. 
+When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
+
+
+Solve Exercise 7 here:
+*/
+console.log(game.party)
+
+game.evolve = function() {
+  console.log(game.party[0])
+  console.log(game.party[1])
+  console.log(game.party[2])
+  console.log(game.party[3])
+  game.party.forEach(pokemon, idx) => {
+    if (pokemon) 
+  }
+}
+  // for game.
+  //   (let index = 0; index < game.party.length; index++) {
+    
+
+  // game.party.splice(pokemon[i + 1])
+
+// I need to iterate through the array then replace each property with the next Pokemon but I don't know
+// how to automate that so the next pokemon automatically evolves
+  // const element = array[index];
+
+game.evolve()
+
+console.log(game.party[0])
+console.log(game.party[1])
+console.log(game.party[2])
+console.log(game.party[3])
+
+/*
+const game = {
+  party: [],
+  gyms: [
+    { location: "Pewter City", completed: false, difficulty: 1 },
+    { location: "Cerulean City", completed: false, difficulty: 2 },
+    { location: "Vermilion City", completed: false, difficulty: 3 },
+    { location: "Celadon City", completed: false, difficulty: 4 },
+    { location: "Fuchsia City", completed: false, difficulty: 5 },
+    { location: "Saffron City", completed: false, difficulty: 6 },
+    { location: "Cinnabar Island", completed: false, difficulty: 7 },
+    { location: "Viridian City", completed: false, difficulty: 8 },
+  ],
+  items: [
+    { name: "potion", quantity: 4 },
+    { name: "pokeball", quantity: 8 },
+    { name: "rare candy", quantity: 99 },
+  ],
+}
+
+*/
