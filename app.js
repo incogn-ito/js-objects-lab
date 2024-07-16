@@ -2,7 +2,7 @@ console.log("Hello")
 
 const game = {
   party: [],
-
+  
   gyms: [
     { location: "Pewter City", completed: false, difficulty: 1 },
     { location: "Cerulean City", completed: false, difficulty: 2 },
@@ -17,6 +17,7 @@ const game = {
     { name: "potion", quantity: 4 },
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
+
   ],
 }
 
@@ -130,47 +131,23 @@ When working with an array of objects, the splice() array method is ideal for re
 
 Solve Exercise 7 here:
 */
-console.log(game.party)
+// 
+  
+// const nextTeam = pokemon[26-1] // index starts at 0, numbers for pokemon begin at 1
+// const startTeam = game.party.indexOf(nextTeam)
+// game.party.splice(startTeam,1,nextTeam)
 
-game.evolve = function() {
-  console.log(game.party[0])
-  console.log(game.party[1])
-  console.log(game.party[2])
-  console.log(game.party[3])
-<<<<<<< HEAD
-  game.party.forEach(pokemon, idx) => {
-    if (pokemon) 
-  }
-}
-  // for game.
-  //   (let index = 0; index < game.party.length; index++) {
-    
-
-  // game.party.splice(pokemon[i + 1])
-
-=======
-  for (let index = 0; index < game.party.length; index++) {
-    game.party += 1
-
-  // game.party.splice(pokemon[i + 1])
-  }
-}
->>>>>>> 8e7bf96db4c3de49a0669d953ba535b5c53b3061
-// I need to iterate through the array then replace each property with the next Pokemon but I don't know
-// how to automate that so the next pokemon automatically evolves
-  // const element = array[index];
-
-game.evolve()
-
-console.log(game.party[0])
-console.log(game.party[1])
-console.log(game.party[2])
-console.log(game.party[3])
-<<<<<<< HEAD
-//test
-=======
->>>>>>> 8e7bf96db4c3de49a0669d953ba535b5c53b3061
-
+let idx = 0 
+const nextTeam = pokemon[idx+1] // idx starts at 0 but numbers for pokemon begin at 1 so pattern => idx + 1 = new pokemon number +1 
+const startTeam = game.party.indexOf(nextTeam)
+game.party.splice(startTeam.nextTeam) // not sure if it matters if I use period or comma
+console.log(pokemon[4]) // becomes 5
+console.log(pokemon[30]) // becomes 31
+console.log(pokemon[35]) // becomes 36
+console.log(pokemon[58]) // becomes 59
+console.log(pokemon[60]) //becomes 61
+console.log(pokemon[1]) // becomes 2
+console.log(pokemon[2]) // becomes 3
 /*
 const game = {
   party: [],
