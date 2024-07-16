@@ -157,6 +157,7 @@ console.log(game.party[0])
 console.log(game.party[1])
 console.log(game.party[2])
 console.log(game.party[3])
+//test
 
 /*
 const game = {
