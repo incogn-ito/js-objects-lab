@@ -174,13 +174,13 @@ Exercise 8
 Solve Exercise 8 here:
 */
 
-getName = function() {
+game.getName = function() {
   console.log(pokemon[0].name)
   console.log(pokemon[1].name)
   console.log(pokemon[2].name)
   console.log(pokemon[3].name)
 }
-getName()
+game.getName()
 
 /*
 Exercise 9
@@ -191,15 +191,14 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-getStarter = function() {                         // not sure about this one
+
+game.getStarter = function() {                          // Unsure of this one ????????????
   for (let i = 0; i < pokemon.length; i++) {
-    if (starter === true) {
+    if ( `${"starter"}` === true) {
       console.log(pokemon)
     }
   }
 }
-
-getStarter()
-
+game.getStarter()
 
 
