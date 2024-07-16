@@ -137,6 +137,7 @@ game.evolve = function() {
   console.log(game.party[1])
   console.log(game.party[2])
   console.log(game.party[3])
+<<<<<<< HEAD
   game.party.forEach(pokemon, idx) => {
     if (pokemon) 
   }
@@ -147,6 +148,14 @@ game.evolve = function() {
 
   // game.party.splice(pokemon[i + 1])
 
+=======
+  for (let index = 0; index < game.party.length; index++) {
+    game.party += 1
+
+  // game.party.splice(pokemon[i + 1])
+  }
+}
+>>>>>>> 8e7bf96db4c3de49a0669d953ba535b5c53b3061
 // I need to iterate through the array then replace each property with the next Pokemon but I don't know
 // how to automate that so the next pokemon automatically evolves
   // const element = array[index];
@@ -157,7 +166,10 @@ console.log(game.party[0])
 console.log(game.party[1])
 console.log(game.party[2])
 console.log(game.party[3])
+<<<<<<< HEAD
 //test
+=======
+>>>>>>> 8e7bf96db4c3de49a0669d953ba535b5c53b3061
 
 /*
 const game = {
