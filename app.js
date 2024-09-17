@@ -37,7 +37,7 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-game.difficulty = ["Easy", "Med", "Hard"]
+game.difficulty = "Easy", 
 
 console.log(game.difficulty)
 
