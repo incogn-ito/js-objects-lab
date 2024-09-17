@@ -80,9 +80,9 @@ Pokémon 7: Squirtle
 Pokémon 25: Pikachu
 */
 
-game.party.push(pokemon[30])
-game.party.push(pokemon[35])
-game.party.push(pokemon[58])
+game.party.unshift(pokemon[30])
+game.party.unshift(pokemon[35])
+game.party.unshift(pokemon[58])
 
 
 /*
