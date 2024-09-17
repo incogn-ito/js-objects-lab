@@ -2,7 +2,7 @@ console.log("Hello")
 
 const game = {
   party: [],
-
+  
   gyms: [
     { location: "Pewter City", completed: false, difficulty: 1 },
     { location: "Cerulean City", completed: false, difficulty: 2 },
@@ -17,6 +17,7 @@ const game = {
     { name: "potion", quantity: 4 },
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
+
   ],
 }
 
@@ -26,7 +27,7 @@ console.log(pokemon[58])
 
 // Exercise 2
 
-// console.log(game)
+console.log(game)
 
 /*
 Exercise 3
@@ -84,6 +85,7 @@ game.party.unshift(pokemon[30])
 game.party.unshift(pokemon[35])
 game.party.unshift(pokemon[58])
 
+console.log(game.party)
 
 /*
 Exercise 6
@@ -94,9 +96,6 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-// console.log(music.currentPlaylist[music.trackIdx]); // 'Just Ken'
-
-// something about key:value pairs
 
 console.log(game.gyms[0].completed) // exp out: false
 console.log(game.gyms[1].completed) // exp out: false
@@ -104,7 +103,7 @@ console.log(game.gyms[2].completed) // exp out: false
 
 game.gyms.forEach((gym) => {
     if (gym.difficulty < 3) {
-    gym.completed = "true"
+    gym.completed = true
     }
   })
   console.log(game.gyms)
@@ -130,29 +129,20 @@ When working with an array of objects, the splice() array method is ideal for re
 
 Solve Exercise 7 here:
 */
-console.log(game.party)
+// 
+  
+// const nextTeam = pokemon[26-1] // index starts at 0, numbers for pokemon begin at 1
+// const startTeam = game.party.indexOf(nextTeam)
+// game.party.splice(startTeam,1,nextTeam)
 
-game.evolve = function() {
-  console.log(game.party[0])
-  console.log(game.party[1])
-  console.log(game.party[2])
-  console.log(game.party[3])
-  for (let index = 0; index < game.party.length; index++) {
-    game.party += 1
-
-  // game.party.splice(pokemon[i + 1])
-  }
-}
-// I need to iterate through the array then replace each property with the next Pokemon but I don't know
-// how to automate that so the next pokemon automatically evolves
-  // const element = array[index];
-
-game.evolve()
-
-console.log(game.party[0])
-console.log(game.party[1])
-console.log(game.party[2])
-console.log(game.party[3])
+let idx = 0 
+const nextTeam = pokemon[idx+1] // idx starts at 0 but numbers for pokemon begin at 1 so pattern => idx + 1 = new pokemon number +1 
+const startTeam = game.party.indexOf(nextTeam)
+game.party.splice(startTeam.nextTeam) // not sure if it matters if I use period or comma
+console.log(pokemon[4]) // becomes 5
+console.log(pokemon[30]) // becomes 31
+console.log(pokemon[35]) // becomes 36
+console.log(pokemon[58]) // becomes 59
 
 /*
 const game = {
@@ -175,3 +165,137 @@ const game = {
 }
 
 */
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+game.getName = function() {
+  console.log(pokemon[0].name)
+  console.log(pokemon[1].name)
+  console.log(pokemon[2].name)
+  console.log(pokemon[3].name)
+}
+game.getName()
+
+/*
+Exercise 9
+1. Can you print out all the starter Pokémon from the `pokemon` array?
+2. Think about how you can identify a starter Pokémon and then log their names.
+
+
+Solve Exercise 9 here:
+*/
+
+
+game.getStarter = function() {                          // NEED HELP ON THIS QUESTION ????
+  for (let i = 0; i < pokemon.length; i++) {
+    if ( `${"starter"}` === true) {
+      console.log(pokemon)
+    }
+  }
+}
+game.getStarter()
+
+/*
+Exercise 10
+Create a method called `catchPokemon` and add it to the `game` object. You should not need to edit the original game object directly. This method should:
+  - Accept an object as a parameter called `pokemonObj`
+  - Add the `pokemonObj` to the `game.party` array.
+  - not return anything
+
+After writing this method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
+
+*/
+game.catchPokemon = function() {
+  game.party.forEach((pokemon) {       // ?????? why don't I need a let statement here?
+  game.party.unshift.pokemonObj
+  })
+}
+game.catchPokemon()
+
+
+/*
+
+Solve Exercise 10 here:
+*/
+
+/*
+Exercise 11
+1. Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify it so that it also decreases the number of pokeballs in your inventory each time you catch a Pokémon.
+2. How will you find and update the quantity of pokeballs in the `game.items` array?
+
+Tips:
+For this exercise, it's okay to have a negative number of pokeballs.
+After updating the method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
+Also, log the `game.items` array to confirm that the pokeball quantity is being decremented.
+
+Solve Exercise 11 here:
+*/
+
+
+
+/*
+Exercise 12
+1. Similar to Exercise 6, now complete gyms with a difficulty below 6. How will you approach this?
+ (change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 12 here:
+*/
+
+/*
+Exercise 13
+1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
+2. How will you iterate through the `gyms` array and update the tally? Remember to log the final tally.
+
+This method should:
+  - Not accept any arguments.
+  - Initially create a constant `gymTally`, which is an object that has two 
+    properties: `completed` and `incomplete`, both of which are initially set to 0.
+  - Iterate through the objects in the `game.gyms` array and update the 
+    properties on `gymTally` as follows: 
+    - `completed` should count how many gyms in the array have a value of `true` 
+      for their `completed` property. 
+    - `incomplete` should count how many gyms in the array have a value of 
+      `false` for their `completed` property.
+  - Log the value of `gymTally`.
+  - The method should not return anything.
+
+For example, if five gym objects have a value of `true` on their `completed` property and three gym objects have a value of `false` on their `completed` property, the logged value would be: `{ completed: 5, incomplete: 3 }`.
+
+Solve Exercise 13 here:
+*/
+
+
+/*
+Exercise 14
+1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
+
+This method should:
+  - Not accept any arguments.
+  - Count the number of Pokemon in the party.
+  - return the found number of Pokemon in the party.
+
+Solve Exercise 14 here:
+*/
+
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+
+/*
+Exercise 16
+1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 16 here:
+*/
+
+
